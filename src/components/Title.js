@@ -10,8 +10,7 @@ const Title = ({ title, subtitle }) => {
   )
 }
 const Wrapper = styled.section`
-  position: absolute;
-  top: 100vh;
+  margin-top: 90vh;
   width: 100%;
   text-align: center;
   padding: 2.2rem 1rem 2.2rem 1rem;
@@ -20,10 +19,9 @@ const Wrapper = styled.section`
     color: var(--dark-grey);
   }
 
-  //Since the hero image max-height is 900px, above this height there needs to be a fixed distance from the relative positoned element
-  //(the navbar) and the Title component.
+  //Since the hero image max-height is 900px, above this height there needs to be a fixed distance from the menu bar and the Title component.
   @media (min-height: 901px) {
-    top: 920px;
+    margin-top: 850px;
   } ;
 `
 export default Title
