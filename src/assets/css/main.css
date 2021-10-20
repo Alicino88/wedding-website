@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500&family=Spectral:wght@300;400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  /*colors*/
+  --dark-grey: hsl(220, 2%, 25%);
+  --light-grey: hsla(0, 0%, 77%, 0.38);
+  --dark-brown: hsl(46, 28%, 33%);
+  --light-brown: hsla(46, 29%, 46%, 0.3);
+  --dark-pink: hsl(327, 32%, 42%);
+  --medium-pink: hsla(327, 35%, 80%, 0.8);
+  --light-pink: hsla(327, 35%, 80%, 0.3);
+}
+
+button {
+  cursor: pointer;
+  font-family: Roboto slab;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffff;
+  padding: 0.5rem 1rem;
+}
+h1 {
+  font-family: Spectral;
+  font-weight: 400;
+  font-size: 3.2rem;
+  color: #ffff;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
