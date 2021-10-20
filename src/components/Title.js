@@ -1,0 +1,29 @@
+import React from "react"
+import styled from "styled-components"
+
+const Title = ({ title, subtitle }) => {
+  return (
+    <Wrapper>
+      <h1 className="title-style">Ci sposiamo!</h1>
+      <h2>25 giugno 2022 - Castelletto Ticino</h2>
+    </Wrapper>
+  )
+}
+const Wrapper = styled.section`
+  position: absolute;
+  top: 100vh;
+  width: 100%;
+  text-align: center;
+  padding: 2.2rem 1rem 2.2rem 1rem;
+
+  .title-style {
+    color: var(--dark-grey);
+  }
+
+  //Since the hero image max-height is 900px, above this height there needs to be a fixed distance from the relative positoned element
+  //(the navbar) and the Title component.
+  @media (min-height: 901px) {
+    top: 920px;
+  } ;
+`
+export default Title

@@ -28,8 +28,6 @@ const Hero = () => {
 }
 
 const Wrapper = styled.header`
-  //on smartphone and tablet the hero is not full height. Fromm 900px width onwards it takes the full height.
-  position: relative;
   width: 100vw;
   height: 100vh;
   max-height: 900px;
