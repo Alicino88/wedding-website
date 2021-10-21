@@ -38,9 +38,24 @@ h2 {
   font-weight: 100;
   font-size: 1.5rem;
   color: var(--dark-brown);
-
   letter-spacing: 0.06em;
   text-transform: capitalize;
+}
+
+h3 {
+  font-family: Spectral;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+  color: var(--dark-grey);
+}
+
+p {
+  font-family: Roboto Slab;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 35px;
+  color: var(--dark-grey);
 }
 
 @media (max-width: 800px) {
