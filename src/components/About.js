@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 const query = graphql`
   {
-    allContentfulNoi {
+    allContentfulNoi(sort: { fields: ordineDiApparizione, order: ASC }) {
       nodes {
         titolo
         testo {
@@ -63,54 +63,105 @@ const Wrapper = styled.section`
   height: auto;
 
   .article-style {
-    display: grid;
-    grid-template-columns: 0.6fr 1fr;
-    grid-template-areas: "image text";
-    width: 800px;
-    margin: 60px auto 150px;
-  }
-
-  //by giving the image and the text area distinct names (grid-area: image; grid-area: text), it is possible to invert their order
-  //with the property grid-template-areas
-
-  .article-style:nth-child(2) {
-    grid-template-areas: "text image";
-    grid-template-columns: 1fr 0.5fr;
-  }
-
-  //makes the dropdown shadow of the second element of a different color
-  .article-style:nth-child(2) .image-style {
-    filter: drop-shadow(40px -40px 0px var(--light-brown));
-  }
-
-  .article-style:nth-child(2) .text-container {
-    padding: 1.5rem 3rem 1.5rem 0rem;
-  }
-
-  .image-style {
-    height: 100%;
-    border-radius: 5px;
-    filter: drop-shadow(-40px -40px 0px var(--light-pink));
-    grid-area: image;
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .text-container {
-    padding: 1.5rem 0rem 1.5rem 3rem;
-    grid-area: text;
+    background-color: var(--light-pink);
+    padding: 2rem 1.5rem;
   }
 
   .title-container {
     display: flex;
     align-items: center;
     margin-bottom: 1.5rem;
+    justify-content: center;
   }
 
   .icon-style {
-    width: 40px;
+    width: 30px;
   }
-
   .title-style {
     margin-left: 0.5em;
+  }
+  p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .article-style:nth-child(2) .text-container {
+    background-color: var(--light-brown);
+  }
+
+  @media (min-width: 780px) {
+    .article-style {
+      display: grid;
+      grid-template-columns: 0.8fr 1fr;
+      grid-template-areas: "image text";
+      width: 650px;
+      margin: 60px auto 150px;
+    }
+
+    //by giving the image and the text area distinct names (grid-area: image; grid-area: text), it is possible to invert their order
+    //with the property grid-template-areas
+
+    .article-style:nth-child(2) {
+      grid-template-areas: "text image";
+      grid-template-columns: 1fr 0.8fr;
+    }
+
+    //makes the dropdown shadow of the second element of a different color
+    .article-style:nth-child(2) .image-style {
+      filter: drop-shadow(30px -30px 0px var(--light-brown));
+    }
+
+    .article-style:nth-child(2) .text-container {
+      padding: 1.5rem 3rem 1.5rem 0rem;
+      background-color: transparent;
+    }
+
+    .image-style {
+      height: 410px;
+      width: 100%;
+      border-radius: 5px;
+      filter: drop-shadow(-30px -30px 0px var(--light-pink));
+      grid-area: image;
+    }
+
+    .text-container {
+      padding: 1.5rem 0rem 1.5rem 2rem;
+      grid-area: text;
+      background-color: transparent;
+    }
+
+    .title-container {
+      justify-content: start;
+    }
+    p {
+      text-align: start;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .article-style {
+      display: grid;
+      grid-template-columns: 0.6fr 1fr;
+      grid-template-areas: "image text";
+      width: 800px;
+      margin: 60px auto 150px;
+    }
+    .article-style:nth-child(2) {
+      grid-template-columns: 1fr 0.6fr;
+    }
+
+    .text-container {
+      padding: 1.5rem 0rem 1.5rem 3rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
   }
 `
 
