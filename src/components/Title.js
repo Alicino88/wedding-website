@@ -13,7 +13,7 @@ const Wrapper = styled.section`
   margin-top: 90vh;
   width: 100%;
   text-align: center;
-  padding: 2.2rem 1rem 2.2rem 1rem;
+  padding: 2.2rem 1rem 4rem 1rem;
 
   .title-style {
     color: var(--dark-grey);
