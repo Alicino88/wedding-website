@@ -10,10 +10,10 @@
   --dark-grey: hsl(220, 2%, 25%);
   --light-grey: hsla(0, 0%, 77%, 0.38);
   --dark-brown: hsl(46, 28%, 33%);
-  --light-brown: hsla(46, 29%, 46%, 0.3);
+  --light-brown: hsla(46, 29%, 46%, 0.1);
   --dark-pink: hsl(327, 32%, 42%);
   --medium-pink: hsla(327, 35%, 80%, 0.8);
-  --light-pink: hsla(327, 35%, 80%, 0.3);
+  --light-pink: hsla(327, 35%, 80%, 0.2);
 }
 
 button {
