@@ -59,16 +59,15 @@ const About = () => {
 const Wrapper = styled.section`
   width: 100%;
   max-width: 1270px;
-  padding: 6rem 2rem 3rem 2rem;
   margin: 0 AUTO;
   height: auto;
 
   .article-style {
     display: grid;
-    grid-template-columns: 0.5fr 1fr;
+    grid-template-columns: 0.6fr 1fr;
     grid-template-areas: "image text";
-    width: 60vw;
-    margin: 0 auto 100px;
+    width: 800px;
+    margin: 60px auto 150px;
   }
 
   //by giving the image and the text area distinct names (grid-area: image; grid-area: text), it is possible to invert their order
@@ -84,6 +83,10 @@ const Wrapper = styled.section`
     filter: drop-shadow(40px -40px 0px var(--light-brown));
   }
 
+  .article-style:nth-child(2) .text-container {
+    padding: 1.5rem 3rem 1.5rem 0rem;
+  }
+
   .image-style {
     height: 100%;
     border-radius: 5px;
@@ -92,7 +95,7 @@ const Wrapper = styled.section`
   }
 
   .text-container {
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 0rem 1.5rem 3rem;
     grid-area: text;
   }
 
