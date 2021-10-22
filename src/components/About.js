@@ -12,7 +12,7 @@ const query = graphql`
           testo
         }
         foto {
-          gatsbyImageData(placeholder: BLURRED, width: 400, height: 500)
+          gatsbyImageData(placeholder: BLURRED)
         }
         icon {
           gatsbyImageData(placeholder: BLURRED)
@@ -86,7 +86,7 @@ const Wrapper = styled.section`
     margin-left: 0.5em;
   }
   p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
   }
 
@@ -94,12 +94,17 @@ const Wrapper = styled.section`
     background-color: var(--light-brown);
   }
 
+  .image-style {
+    height: 350px;
+    max-width: 100%;
+  }
+
   @media (min-width: 780px) {
     .article-style {
       display: grid;
       grid-template-columns: 0.8fr 1fr;
       grid-template-areas: "image text";
-      width: 650px;
+      width: 700px;
       margin: 60px auto 150px;
     }
 
@@ -113,19 +118,19 @@ const Wrapper = styled.section`
 
     //makes the dropdown shadow of the second element of a different color
     .article-style:nth-child(2) .image-style {
-      filter: drop-shadow(30px -30px 0px var(--light-brown));
+      filter: drop-shadow(30px -30px 0px var(--medium-brown));
     }
 
     .article-style:nth-child(2) .text-container {
-      padding: 1.5rem 3rem 1.5rem 0rem;
+      padding: 1.5rem 2rem 1.5rem 0rem;
       background-color: transparent;
     }
 
     .image-style {
-      height: 410px;
-      width: 100%;
+      height: auto;
+      max-width: 100%;
       border-radius: 5px;
-      filter: drop-shadow(-30px -30px 0px var(--light-pink));
+      filter: drop-shadow(-30px -30px 0px var(--medium-pink));
       grid-area: image;
     }
 
@@ -134,12 +139,13 @@ const Wrapper = styled.section`
       grid-area: text;
       background-color: transparent;
     }
-
+    .icon-style {
+      width: 40px;
+    }
     .title-container {
       justify-content: start;
     }
     p {
-      font-size: 0.8rem;
       text-align: start;
     }
   }
@@ -160,8 +166,8 @@ const Wrapper = styled.section`
       padding: 1.5rem 0rem 1.5rem 3rem;
     }
 
-    p {
-      font-size: 1rem;
+    .article-style:nth-child(2) .text-container {
+      padding: 1.5rem 3rem 1.5rem 0rem;
     }
   }
 `
