@@ -86,7 +86,7 @@ const Wrapper = styled.section`
     margin-left: 0.5em;
   }
   p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: center;
   }
 
@@ -139,6 +139,7 @@ const Wrapper = styled.section`
       justify-content: start;
     }
     p {
+      font-size: 0.8rem;
       text-align: start;
     }
   }
