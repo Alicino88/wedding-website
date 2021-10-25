@@ -27,7 +27,7 @@ const About = () => {
   const {
     allContentfulNoi: { nodes: sposi },
   } = data
-  console.log(sposi)
+  //console.log(sposi)
   return (
     <Wrapper>
       {sposi.map(sposo => {
@@ -86,7 +86,6 @@ const Wrapper = styled.section`
     margin-left: 0.5em;
   }
   p {
-    font-size: 1.2rem;
     text-align: center;
   }
 
