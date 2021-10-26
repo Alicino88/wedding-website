@@ -18,6 +18,7 @@ import wine from "../assets/data/wine.json"
 import party from "../assets/data/party.json"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+import { StaticImage } from "gatsby-plugin-image"
 
 export const query = graphql`
   {
@@ -105,7 +106,7 @@ const Wedding = () => {
   return (
     <Wrapper>
       <div className="title-container">
-        <h2>{data.contentfulMatrimonio.titolo}</h2>
+        <h3>{data.contentfulMatrimonio.titolo}</h3>
         <p>{data.contentfulMatrimonio.sottotitolo}</p>
       </div>
       {/*
@@ -125,19 +126,25 @@ const Wedding = () => {
       </div>
       */}
       <div className="program-container">
+        <StaticImage
+          src="../assets/images/spots.png"
+          placeholder="tracedSVG"
+          layout="constrained"
+          className="background-style"
+        />
         <div className="program-card">
-          <div className="animation-container1" ref={animationContainer1}></div>
-          <p>ore 17</p>
+          <div className="animation-container" ref={animationContainer1}></div>
+          <p className="time-style">ore 17:00</p>
           <p>cerimonia</p>
         </div>
         <div className="program-card">
-          <div className="animation-container2" ref={animationContainer2}></div>
-          <p>ore 19</p>
+          <div className="animation-container" ref={animationContainer2}></div>
+          <p className="time-style">ore 19:00</p>
           <p>cena</p>
         </div>
         <div className="program-card">
-          <div className="animation-container3" ref={animationContainer3}></div>
-          <p>ore 22</p>
+          <div className="animation-container" ref={animationContainer3}></div>
+          <p className="time-style">ore 22:00</p>
           <p>tutti si balla</p>
         </div>
       </div>
@@ -146,6 +153,9 @@ const Wedding = () => {
 }
 
 const Wrapper = styled.section`
+  position: relative;
+  height: auto;
+  padding: 50px 0 20px 0;
   .title-container {
     text-align: center;
   }
@@ -155,14 +165,23 @@ const Wrapper = styled.section`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 1.5rem;
-    margin: 0 auto;
+    margin: 3rem auto;
   }
 
+  .background-style {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.3;
+  }
   .program-card {
     text-align: center;
   }
   .animation-container {
-    width: 100%;
+    width: 80px;
+    margin: 0 auto;
   }
 
   .program-style {
@@ -174,6 +193,13 @@ const Wrapper = styled.section`
     display: flex;
     flex-direction: column;
     display: inline-block;
+  }
+
+  .time-style {
+    text-transform: uppercase;
+    color: var(--dark-pink);
+    font-weight: 500;
+    font-size: 0.8rem;
   }
 `
 
