@@ -57,7 +57,7 @@ const Wedding = () => {
       animationData: heart, //animation file
       renderer: "svg",
       loop: true,
-      autoplay: false,
+      autoplay: true,
     }
 
     let wineIcon = {
@@ -65,14 +65,14 @@ const Wedding = () => {
       animationData: wine, //animation file
       renderer: "svg",
       loop: true,
-      autoplay: false,
+      autoplay: true,
     }
     let partyIcon = {
       container: animationContainer3.current,
       animationData: party, //animation file
       renderer: "svg",
       loop: true,
-      autoplay: false,
+      autoplay: true,
     }
     /*
     lottie.loadAnimation({
@@ -84,7 +84,12 @@ const Wedding = () => {
       autoplay: true,
     })
     */
-    lottie.loadAnimation(heartIcon, wineIcon, partyIcon)
+
+    //lottie.loadAnimation can only take one argument, the following sintax would render ONLY the first icon:
+    // lottie.loadAnimation(heartIcon,wineIcon, partyIcon )
+    let heartAnimation = lottie.loadAnimation(heartIcon)
+    let wineAnimation = lottie.loadAnimation(wineIcon)
+    let partyAnimation = lottie.loadAnimation(partyIcon)
   }, [])
 
   /*
