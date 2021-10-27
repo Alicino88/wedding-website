@@ -9,7 +9,7 @@
   to an element in your application to provide access to the element’s DOM from anywhere within your component.
   https://blog.logrocket.com/how-to-use-react-createref-ea014ad09dba/
 4)call loadAnimation().This takes an object where you can configure the animation.
-5)the reference can be used only after the component has mounted, for this reason we use useEffect(.)
+5)the reference can be used only after the component has mounted, for this reason useEffect() is being used.
 */
 import React, { createRef, useEffect } from "react"
 import lottie from "lottie-web"
@@ -47,7 +47,7 @@ const Wedding = () => {
       container: animationContainer1.current,
       animationData: heart, //animation file
       renderer: "svg",
-      loop: true,
+      loop: 2,
       autoplay: false,
     }
 
@@ -55,14 +55,14 @@ const Wedding = () => {
       container: animationContainer2.current,
       animationData: wine, //animation file
       renderer: "svg",
-      loop: true,
+      loop: 2,
       autoplay: false,
     }
     let partyIcon = {
       container: animationContainer3.current,
       animationData: party, //animation file
       renderer: "svg",
-      loop: true,
+      loop: 2,
       autoplay: false,
     }
 
@@ -78,26 +78,13 @@ const Wedding = () => {
     heartPlay.setSpeed(2)
   }
 
-  function stopHeartAnimation() {
-    //animation goes to frame 0 (value) and then stops. goToAndStop(value, isFrame)
-    heartPlay.goToAndStop(0, true)
-  }
-
   function startWineAnimation() {
     winePlay.play()
     winePlay.setSpeed(2)
   }
 
-  function stopWineAnimation() {
-    winePlay.goToAndStop(0, true)
-  }
-
   function startPartyAnimation() {
     partyPlay.play()
-  }
-
-  function stopPartyAnimation() {
-    partyPlay.goToAndStop(0, true)
   }
 
   return (
@@ -113,29 +100,17 @@ const Wedding = () => {
           layout="constrained"
           className="background-style"
         />
-        <div
-          className="program-card"
-          onMouseEnter={startHeartAnimation}
-          onMouseLeave={stopHeartAnimation}
-        >
+        <div className="program-card" onMouseEnter={startHeartAnimation}>
           <div className="animation-container" ref={animationContainer1}></div>
           <p className="time-style">ore 17:00</p>
           <p className="text-style">cerimonia</p>
         </div>
-        <div
-          className="program-card"
-          onMouseEnter={startWineAnimation}
-          onMouseLeave={stopWineAnimation}
-        >
+        <div className="program-card" onMouseEnter={startWineAnimation}>
           <div className="animation-container" ref={animationContainer2}></div>
           <p className="time-style">ore 19:00</p>
           <p className="text-style">cena</p>
         </div>
-        <div
-          className="program-card"
-          onMouseEnter={startPartyAnimation}
-          onMouseLeave={stopPartyAnimation}
-        >
+        <div className="program-card" onMouseEnter={startPartyAnimation}>
           <div className="animation-container" ref={animationContainer3}></div>
           <p className="time-style">ore 22:00</p>
           <p className="text-style">tutti si balla</p>
