@@ -71,20 +71,30 @@ const Wedding = () => {
     heartPlay = lottie.loadAnimation(heartIcon)
     winePlay = lottie.loadAnimation(wineIcon)
     partyPlay = lottie.loadAnimation(partyIcon)
-  }, [])
+  })
 
   function startHeartAnimation() {
     heartPlay.play()
     heartPlay.setSpeed(2)
   }
 
+  function stopHeartAnimation() {
+    heartPlay.stop()
+  }
+
   function startWineAnimation() {
     winePlay.play()
     winePlay.setSpeed(2)
   }
+  function stopWineAnimation() {
+    lottie.stop()
+  }
 
   function startPartyAnimation() {
     partyPlay.play()
+  }
+  function stopPartyAnimation() {
+    lottie.stop()
   }
 
   return (
@@ -100,17 +110,29 @@ const Wedding = () => {
           layout="constrained"
           className="background-style"
         />
-        <div className="program-card" onMouseEnter={startHeartAnimation}>
+        <div
+          className="program-card"
+          onMouseEnter={startHeartAnimation}
+          onMouseLeave={stopHeartAnimation}
+        >
           <div className="animation-container" ref={animationContainer1}></div>
           <p className="time-style">ore 17:00</p>
           <p className="text-style">cerimonia</p>
         </div>
-        <div className="program-card" onMouseEnter={startWineAnimation}>
+        <div
+          className="program-card"
+          onMouseEnter={startWineAnimation}
+          onMouseLeave={stopWineAnimation}
+        >
           <div className="animation-container" ref={animationContainer2}></div>
           <p className="time-style">ore 19:00</p>
           <p className="text-style">cena</p>
         </div>
-        <div className="program-card" onMouseEnter={startPartyAnimation}>
+        <div
+          className="program-card"
+          onMouseEnter={startPartyAnimation}
+          onMouseLeave={stopPartyAnimation}
+        >
           <div className="animation-container" ref={animationContainer3}></div>
           <p className="time-style">ore 22:00</p>
           <p className="text-style">tutti si balla</p>
