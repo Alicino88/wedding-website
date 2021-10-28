@@ -116,7 +116,7 @@ const Wedding = () => {
           onMouseLeave={stopHeartAnimation}
         >
           <div className="animation-container" ref={animationContainer1}></div>
-          <p className="time-style">ore 17:00</p>
+          <p className="small-uppercase">ore 17:00</p>
           <p className="text-style">cerimonia</p>
         </div>
         <div
@@ -125,7 +125,7 @@ const Wedding = () => {
           onMouseLeave={stopWineAnimation}
         >
           <div className="animation-container" ref={animationContainer2}></div>
-          <p className="time-style">ore 19:00</p>
+          <p className="small-uppercase">ore 19:00</p>
           <p className="text-style">cena</p>
         </div>
         <div
@@ -134,7 +134,7 @@ const Wedding = () => {
           onMouseLeave={stopPartyAnimation}
         >
           <div className="animation-container" ref={animationContainer3}></div>
-          <p className="time-style">ore 22:00</p>
+          <p className="small-uppercase">ore 22:00</p>
           <p className="text-style">tutti si balla</p>
         </div>
       </div>
@@ -163,6 +163,7 @@ const Wrapper = styled.section`
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
     bottom: 0;
     z-index: -1;
     opacity: 0.3;
@@ -177,11 +178,7 @@ const Wrapper = styled.section`
     margin: 0 auto;
   }
 
-  .time-style {
-    text-transform: uppercase;
-    color: var(--dark-pink);
-    font-weight: 500;
-    font-size: 0.8rem;
+  .small-uppercase {
     text-decoration: underline;
   }
 
