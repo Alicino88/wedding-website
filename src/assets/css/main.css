@@ -59,6 +59,14 @@ p {
   color: var(--dark-grey);
 }
 
+.small-uppercase {
+  font-family: Roboto Slab;
+  text-transform: uppercase;
+  color: var(--dark-pink);
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
 @media (max-width: 800px) {
   h1 {
     font-size: 2rem;
