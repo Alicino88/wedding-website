@@ -59,7 +59,7 @@ const About = () => {
 const Wrapper = styled.section`
   width: 100%;
   max-width: 1270px;
-  margin: 0 AUTO;
+  margin: 0 auto;
   height: auto;
 
   .article-style {
@@ -98,12 +98,12 @@ const Wrapper = styled.section`
     max-width: 100%;
   }
 
-  @media (min-width: 780px) {
+  @media (min-width: 730px) {
     .article-style {
       display: grid;
       grid-template-columns: 0.8fr 1fr;
       grid-template-areas: "image text";
-      width: 700px;
+      width: 650px;
       margin: 60px auto 150px;
     }
 
@@ -117,7 +117,7 @@ const Wrapper = styled.section`
 
     //makes the dropdown shadow of the second element of a different color
     .article-style:nth-child(2) .image-style {
-      filter: drop-shadow(30px -30px 0px var(--medium-brown));
+      box-shadow: 30px -30px 0px var(--medium-brown);
     }
 
     .article-style:nth-child(2) .text-container {
@@ -129,7 +129,7 @@ const Wrapper = styled.section`
       height: auto;
       max-width: 100%;
       border-radius: 5px;
-      filter: drop-shadow(-30px -30px 0px var(--medium-pink));
+      box-shadow: -30px -30px 0px var(--medium-pink);
       grid-area: image;
     }
 
