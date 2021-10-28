@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import Title from "../components/Title"
 import About from "../components/About"
 import Wedding from "../components/Wedding"
+import Location from "../components/Location"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Title />
       <About />
       <Wedding />
+      <Location />
     </Layout>
   )
 }
