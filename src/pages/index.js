@@ -5,6 +5,7 @@ import Title from "../components/Title"
 import About from "../components/About"
 import Wedding from "../components/Wedding"
 import Location from "../components/Location"
+import Countdown from "../components/Countdown"
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <About />
       <Wedding />
       <Location />
+      <Countdown />
     </Layout>
   )
 }
