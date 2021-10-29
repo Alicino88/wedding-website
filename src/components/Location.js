@@ -63,7 +63,7 @@ const Wrapper = styled.section`
       grid-template-columns: 0.8fr 1fr;
       grid-template-areas: "image text";
       width: 800px;
-      margin: 60px auto 150px;
+      margin: 60px auto 90px;
       padding: 3.5rem;
     }
 
