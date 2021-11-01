@@ -149,7 +149,7 @@ const Wrapper = styled.section`
     }
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 900px) {
     .article-style {
       display: grid;
       grid-template-columns: 0.6fr 1fr;
