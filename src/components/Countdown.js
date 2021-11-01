@@ -70,7 +70,7 @@ const Countdown = () => {
     // If the timer interval has a value above zero, it adds an element to the timerComponents array.
     timerComponents.push(
       <div className="date-block">
-        <h3 className="text-style">{timeLeft[interval]}</h3>
+        <h3 className="number-style">{timeLeft[interval]}</h3>
         <div className="small-uppercase"> {interval} </div>
       </div>
     )
@@ -78,6 +78,10 @@ const Countdown = () => {
 
   return (
     <Wrapper>
+      <div className="title-container">
+        <h3>Conto alla rovescia...</h3>
+      </div>
+
       <StaticImage
         src="../assets/images/spots.png"
         placeholder="tracedSVG"
@@ -96,7 +100,8 @@ const Wrapper = styled.div`
   height: auto;
   width: 100%;
   position: relative;
-  padding: 70px 0;
+  padding: 50px 0;
+  background-color: var(--light-brown);
 
   .background-style {
     position: absolute;
@@ -108,11 +113,34 @@ const Wrapper = styled.div`
     opacity: 0.3;
   }
 
+  .title-container {
+    text-align: center;
+  }
+
+  .small-uppercase {
+    color: var(--dark-brown);
+  }
+
   .countdown-container {
+    background-color: white;
+    border-radius: 5px;
+    max-width: 1100px;
     display: grid;
-    width: 60vw;
+    width: 90vw;
     grid-template-columns: repeat(4, 1fr);
-    margin: auto;
+    margin: 30px auto;
+    padding: 30px 0;
+  }
+
+  @media (min-width: 500px) {
+    .countdown-container {
+      width: 70vw;
+    }
+  }
+  @media (min-width: 1000px) {
+    .countdown-container {
+      width: 50vw;
+    }
   }
 
   .date-block {
