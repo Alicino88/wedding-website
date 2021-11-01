@@ -62,7 +62,7 @@ const Wrapper = styled.section`
       display: grid;
       grid-template-columns: 0.8fr 1fr;
       grid-template-areas: "image text";
-      width: 800px;
+      width: 750px;
       margin: 60px auto 90px;
       padding: 3.5rem;
     }
@@ -79,7 +79,7 @@ const Wrapper = styled.section`
     }
   }
 
-  @media (min-width: 790px) {
+  @media (min-width: 900px) {
     .location-container {
       width: 900px;
     }
