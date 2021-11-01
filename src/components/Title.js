@@ -5,7 +5,7 @@ const Title = ({ title, subtitle }) => {
   return (
     <Wrapper>
       <h1 className="title-style">Ci sposiamo!</h1>
-      <h2>25 giugno 2022 - Castelletto Ticino</h2>
+      <h2>25 giugno 2022 - Castelletto sopra Ticino</h2>
     </Wrapper>
   )
 }
