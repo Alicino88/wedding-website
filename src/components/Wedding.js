@@ -16,6 +16,7 @@ import lottie from "lottie-web"
 import heart from "../assets/data/heart.json"
 import wine from "../assets/data/wine.json"
 import party from "../assets/data/party.json"
+import cocktail from "../assets/data/cocktail.json"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
@@ -35,10 +36,12 @@ const Wedding = () => {
   let animationContainer1 = createRef()
   let animationContainer2 = createRef()
   let animationContainer3 = createRef()
+  let animationContainer4 = createRef()
 
   let heartPlay = null
   let winePlay = null
   let partyPlay = null
+  let cocktailPlay = null
 
   //useEffect runs the function whenever there is a re-render: initially when the component first loads
   //and whenever the data change
@@ -46,6 +49,13 @@ const Wedding = () => {
     let heartIcon = {
       container: animationContainer1.current,
       animationData: heart, //animation file
+      renderer: "svg",
+      loop: 2,
+      autoplay: false,
+    }
+    let cocktailIcon = {
+      container: animationContainer4.current,
+      animationData: cocktail, //animation file
       renderer: "svg",
       loop: 2,
       autoplay: false,
@@ -71,6 +81,7 @@ const Wedding = () => {
     heartPlay = lottie.loadAnimation(heartIcon)
     winePlay = lottie.loadAnimation(wineIcon)
     partyPlay = lottie.loadAnimation(partyIcon)
+    cocktailPlay = lottie.loadAnimation(cocktailIcon)
   })
 
   function startHeartAnimation() {
@@ -97,6 +108,13 @@ const Wedding = () => {
     lottie.stop()
   }
 
+  function startCocktailAnimation() {
+    cocktailPlay.play()
+  }
+  function stopCocktailAnimation() {
+    lottie.stop()
+  }
+
   return (
     <Wrapper>
       <div className="title-container">
@@ -117,7 +135,16 @@ const Wedding = () => {
         >
           <div className="animation-container" ref={animationContainer1}></div>
           <p className="small-uppercase">ore 17:00</p>
-          <p className="text-style">cerimonia</p>
+          <p className="text-style">cerimonia simbolica</p>
+        </div>
+        <div
+          className="program-card"
+          onMouseEnter={startCocktailAnimation}
+          onMouseLeave={stopCocktailAnimation}
+        >
+          <div className="animation-container" ref={animationContainer4}></div>
+          <p className="small-uppercase">ore 18:00</p>
+          <p className="text-style">aperitivo</p>
         </div>
         <div
           className="program-card"
@@ -125,7 +152,7 @@ const Wedding = () => {
           onMouseLeave={stopWineAnimation}
         >
           <div className="animation-container" ref={animationContainer2}></div>
-          <p className="small-uppercase">ore 19:00</p>
+          <p className="small-uppercase">ore 19:30</p>
           <p className="text-style">cena</p>
         </div>
         <div
@@ -135,7 +162,7 @@ const Wedding = () => {
         >
           <div className="animation-container" ref={animationContainer3}></div>
           <p className="small-uppercase">ore 22:00</p>
-          <p className="text-style">tutti si balla</p>
+          <p className="text-style">si aprono le danze</p>
         </div>
       </div>
     </Wrapper>
@@ -151,11 +178,11 @@ const Wrapper = styled.section`
   }
 
   .program-container {
-    width: 70vw;
-    max-width: 1270px;
+    width: 95vw;
+    max-width: 900px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
     margin: 3rem auto;
   }
 
@@ -195,6 +222,12 @@ const Wrapper = styled.section`
     }
     .program-card {
       margin-bottom: 1rem;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .program-container {
+      width: 70vw;
     }
   }
 `
