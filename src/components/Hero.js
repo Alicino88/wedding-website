@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <Wrapper>
       <StaticImage
-        src="../assets/images/roses2.jpg"
+        src="../assets/images/roses5.jpg"
         className="header-pic"
         alt="white roses"
         placeholder="blurred"
@@ -41,7 +41,7 @@ const Wrapper = styled.header`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: brightness(0.6);
+    filter: brightness(0.5);
   }
 
   .hero-content {
