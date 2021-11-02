@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
-import marta from "../assets/images/marta1.png"
+import { StaticImage } from "gatsby-plugin-image"
 
 export const query = graphql`
   {
@@ -26,12 +26,33 @@ const Location = () => {
   return (
     <Wrapper>
       <div className="location-container">
-        <GatsbyImage image={pathToImage} className="pic-style"></GatsbyImage>
+        <GatsbyImage
+          image={pathToImage}
+          className="pic-style"
+          alt={location.name}
+        ></GatsbyImage>
 
         <div className="text-container">
           <h4 className="small-uppercase">{location.title}</h4>
           <h3>{location.name}</h3>
           <p>{location.description.description}</p>
+          <a
+            style={{
+              marginTop: "20px",
+              display: "flex",
+              textDecoration: "none",
+            }}
+            href="https://www.google.com/maps/place/Jardin+a+Vivre/@45.7044514,8.6436016,17z/data=!3m1!4b1!4m5!3m4!1s0x4786651a342b23e1:0x4610fe8a8edaa426!8m2!3d45.7044062!4d8.6457315"
+            target="_blank"
+          >
+            <StaticImage
+              src="../assets/images/map_icon.png"
+              placeholder="tracedSVG"
+              layout="constrained"
+              className="icon-style"
+            />
+            <p className="link-style">Vedi sulla mappa</p>
+          </a>
         </div>
       </div>
     </Wrapper>
@@ -55,6 +76,19 @@ const Wrapper = styled.section`
   }
 
   .small-uppercase {
+    color: var(--dark-brown);
+  }
+
+  .icon-style {
+    width: 32px;
+    height: 32px;
+  }
+
+  .link-style {
+    margin-left: 10px;
+    font-family: Roboto Slab;
+    font-weight: 500;
+    font-size: 0.9rem;
     color: var(--dark-brown);
   }
   @media (min-width: 730px) {
