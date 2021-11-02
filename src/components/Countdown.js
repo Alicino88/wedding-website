@@ -63,9 +63,9 @@ const Countdown = () => {
   Object.keys(timeLeft).forEach(interval => {
     //console.log(interval)-->displays: "months", "hours", "minutes", "seconds"
     //console.log(timeLeft[interval])-->displays the actual days, ours, minutes and seconds in numeric value
-    if (!timeLeft[interval]) {
+    /*if (!timeLeft[interval]) {
       return
-    }
+    }*/
 
     // If the timer interval has a value above zero, it adds an element to the timerComponents array.
     timerComponents.push(
