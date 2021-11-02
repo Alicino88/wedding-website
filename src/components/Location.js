@@ -79,9 +79,9 @@ const Wrapper = styled.section`
     }
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: 1100px) {
     .location-container {
-      width: 900px;
+      width: 1100px;
     }
   }
 `
