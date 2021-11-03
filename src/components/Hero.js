@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <Wrapper>
       <StaticImage
-        src="../assets/images/roses8.jpeg"
+        src="../assets/images/roses10.jpeg"
         className="header-pic"
         alt="white roses"
         placeholder="blurred"
@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="hero-content">
         <h1 className="hero-title">
           Marta&nbsp;
-          <span style={{ color: "hsla(0, 0%, 77%, 0.65)" }}>&amp;</span>
+          <span style={{ color: "hsla(0, 0%, 91%, 0.75)" }}>&amp;</span>
           &nbsp;Alberto
         </h1>
       </div>
@@ -41,7 +41,7 @@ const Wrapper = styled.header`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: brightness(0.7);
+    filter: brightness(0.6);
   }
 
   .hero-content {
