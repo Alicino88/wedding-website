@@ -141,7 +141,7 @@ const Wrapper = styled.section`
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1100px) {
     .article-style {
       grid-template-columns: 0.6fr 1fr;
       grid-template-areas: "image text";
