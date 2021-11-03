@@ -87,7 +87,7 @@ const Wrapper = styled.nav`
   }
 
   .menu-btn:hover {
-    box-shadow: inset 0 -3px var(--medium-pink);
+    box-shadow: inset 0 -3px hsla(0, 0%, 91%, 0.75);
   }
 `
 export default Navbar
