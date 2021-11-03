@@ -175,6 +175,7 @@ const Wrapper = styled.section`
   padding: 50px 0 20px 0;
   .title-container {
     text-align: center;
+    padding: 0 30px;
   }
 
   .program-container {
