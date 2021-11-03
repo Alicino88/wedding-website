@@ -80,9 +80,6 @@ const Wrapper = styled.section`
   .title-style {
     margin-left: 0.5em;
   }
-  p {
-    text-align: center;
-  }
 
   .article-style:nth-child(2) .text-container {
     background-color: var(--light-brown);
