@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const Rsvp = () => {
   return (
-    <Wrapper className="rsvp-container">
+    <Wrapper className="rsvp-container" id="rsvp">
       <StaticImage
         src="../assets/images/rsvp.jpeg"
         className="image-style"
