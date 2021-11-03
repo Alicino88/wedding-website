@@ -82,7 +82,8 @@ const Wedding = () => {
     winePlay = lottie.loadAnimation(wineIcon)
     partyPlay = lottie.loadAnimation(partyIcon)
     cocktailPlay = lottie.loadAnimation(cocktailIcon)
-  }, [])
+    //dependency array makes sure the useEffect runs only after the first render
+  })
 
   function startHeartAnimation() {
     heartPlay.play()
