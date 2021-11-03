@@ -8,12 +8,12 @@ const Countdown = () => {
   //new Date() gives the current date
   //currentDateSeconds represent the current date expressed in number of milliseconds from today since 1 January 1970 00:00:00
   //The + before the new Date object is telling JavaScript to cast the object as an integer
-  let currentDate = new Date()
-  let currentDateSeconds = +new Date()
+  // let currentDate = new Date()
+  //let currentDateSeconds = +new Date()
 
   //also time variable represents the current date expressed in number of milliseconds from today since 1 January 1970 00:00:00
   //it is the same as writing +new Date()
-  let time = new Date().getTime()
+  //let time = new Date().getTime()
 
   //below the correct syntax to get a specific date
   //let dateTest = new Date("June 25, 2022 17:00:00")
