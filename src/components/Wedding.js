@@ -83,6 +83,15 @@ const Wedding = () => {
     partyPlay = lottie.loadAnimation(partyIcon)
     cocktailPlay = lottie.loadAnimation(cocktailIcon)
     //dependency array makes sure the useEffect runs only after the first render
+
+    //below we remove the icons whenever there is a component re-render. For example, when we scroll to a specific section of the page
+    //after clicking on the navbar links
+    return () => {
+      heartPlay.destroy()
+      winePlay.destroy()
+      partyPlay.destroy()
+      cocktailPlay.destroy()
+    }
   })
 
   function startHeartAnimation() {
