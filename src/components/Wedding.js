@@ -82,7 +82,7 @@ const Wedding = () => {
     winePlay = lottie.loadAnimation(wineIcon)
     partyPlay = lottie.loadAnimation(partyIcon)
     cocktailPlay = lottie.loadAnimation(cocktailIcon)
-  })
+  }, [])
 
   function startHeartAnimation() {
     heartPlay.play()
@@ -116,7 +116,7 @@ const Wedding = () => {
   }
 
   return (
-    <Wrapper>
+    <Wrapper id="il-matrimonio">
       <div className="title-container">
         <h3>{data.contentfulMatrimonio.titolo}</h3>
         <p>{data.contentfulMatrimonio.sottotitolo}</p>

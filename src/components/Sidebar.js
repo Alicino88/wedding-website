@@ -12,11 +12,11 @@ const Sidebar = ({ toggle, isOpen }) => {
           <CgClose />
         </button>
         <div className="text-container">
-          <Link className="sidebar-links" onClick={toggle}>
+          <Link className="sidebar-links" onClick={toggle} to="/#noi">
             Noi
             <BiPlus className="plus-icon" />
           </Link>
-          <Link className="sidebar-links" onClick={toggle}>
+          <Link className="sidebar-links" onClick={toggle} to="/#il-matrimonio">
             Matrimonio
             <BiPlus className="plus-icon" />
           </Link>

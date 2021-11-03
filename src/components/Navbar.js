@@ -8,10 +8,15 @@ const Navbar = ({ toggle }) => {
     <Wrapper>
       <div className="nav-container">
         <button className="menu-btn">
-          <Link className="link-container">noi</Link>
+          <Link className="link-container" to="/#noi">
+            noi
+          </Link>
         </button>
         <button className="menu-btn">
-          <Link className="link-container">matrimonio</Link>
+          <Link className="link-container" to="/#il-matrimonio">
+            {" "}
+            il matrimonio
+          </Link>
         </button>
         <button className="menu-btn">
           <Link className="link-container">lista nozze</Link>
@@ -50,6 +55,8 @@ const Wrapper = styled.nav`
 
   .link-container {
     text-align: center;
+    text-decoration: none;
+    color: white;
   }
 
   //hides hamburger menu above 750px width and makes text menu visible

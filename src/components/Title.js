@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const Title = ({ title, subtitle }) => {
   return (
-    <Wrapper>
+    <Wrapper id="noi">
       <h1 className="title-style">Ci sposiamo!</h1>
       <h2>25 giugno 2022 - Castelletto sopra Ticino</h2>
     </Wrapper>
