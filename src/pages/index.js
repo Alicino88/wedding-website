@@ -7,6 +7,7 @@ import Wedding from "../components/Wedding"
 import Location from "../components/Location"
 import Countdown from "../components/Countdown"
 import Footer from "../components/Footer"
+import Rsvp from "../components/Rsvp"
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Wedding />
       <Location />
       <Countdown />
+      <Rsvp />
       <Footer />
     </Layout>
   )
