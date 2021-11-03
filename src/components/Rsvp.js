@@ -29,8 +29,8 @@ const Wrapper = styled.section`
     padding: 3.5rem 2rem 2rem 2rem;
   }
   button {
-    color: var(--dark-brown);
-    border: 2px solid var(--dark-brown);
+    color: var(--medium-brown);
+    border: 2px solid var(--medium-brown);
     background-color: transparent;
     border-radius: 5px;
     margin-top: 1rem;
@@ -38,22 +38,28 @@ const Wrapper = styled.section`
     font-size: 1rem;
   }
 
+  button:hover {
+    border: 2px solid var(--dark-brown);
+    color: var(--dark-brown);
+  }
+
   @media (min-width: 750px) {
     width: 90vw;
     display: flex;
     flex-direction: row;
-    margin: 40px auto;
+    margin: 90px auto;
+    border: 1.3px solid var(--medium-brown);
+    border-radius: 5px;
 
     .image-style {
       width: 50%;
-      border-radius: 5px;
+      border-radius: 5px 0 0 5px;
     }
 
     .text-container {
       width: 50%;
       margin: auto;
-      padding: 0;
-      margin-left: 40px;
+      padding: 20px 20px;
     }
   }
 
