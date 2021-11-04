@@ -5,6 +5,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   /*colors*/
   --dark-grey: hsl(220, 2%, 25%);
