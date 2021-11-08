@@ -26,11 +26,26 @@ const Location = () => {
   return (
     <Wrapper>
       <div className="location-container">
-        <GatsbyImage
-          image={pathToImage}
-          className="pic-style"
-          alt={location.name}
-        ></GatsbyImage>
+        <div className="pic-container">
+          <GatsbyImage
+            image={pathToImage}
+            className="pic-style"
+            alt={location.name}
+          ></GatsbyImage>
+
+          <p className="link-style">
+            Fotografia di{" "}
+            <a
+              href="https://www.marcoarduino.com/"
+              target="_blank"
+              style={{
+                color: "hsl(46, 28%, 33%)",
+              }}
+            >
+              Marco Arduino
+            </a>
+          </p>
+        </div>
 
         <div className="text-container">
           <h4 className="small-uppercase">{location.title}</h4>
@@ -71,6 +86,10 @@ const Wrapper = styled.section`
     display: flex;
     flex-direction: column-reverse;
   }
+
+  .pic-container {
+    margin-bottom: 50px;
+  }
   .text-container {
     padding: 3.5rem 2rem 2rem 2rem;
   }
@@ -97,7 +116,7 @@ const Wrapper = styled.section`
       grid-template-columns: 0.8fr 1fr;
       grid-template-areas: "image text";
       width: 750px;
-      margin: 60px auto 90px;
+      margin: 60px auto 40px;
       padding: 3.5rem;
     }
 
@@ -106,7 +125,7 @@ const Wrapper = styled.section`
     }
 
     .pic-style {
-      height: auto;
+      height: 100%;
       max-width: 100%;
       border-radius: 5px;
       box-shadow: -30px -30px var(--medium-brown);
@@ -115,7 +134,7 @@ const Wrapper = styled.section`
 
   @media (min-width: 1100px) {
     .location-container {
-      width: 1100px;
+      width: 1300px;
     }
   }
 `
