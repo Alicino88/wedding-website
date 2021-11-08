@@ -10,7 +10,13 @@ const Rsvp = () => {
         className="image-style"
       ></StaticImage>
       <div className="text-container">
-        <h3>Ci sarai?</h3>
+        <div className="title-container">
+          <StaticImage
+            src="../assets/images/envelope.png"
+            className="envelope"
+          />
+          <h3>Ci sarai?</h3>
+        </div>
         <p>
           Conferma o declina la tua partecipazione cliccando sul bottone
           sottostante. Ti chiediamo anche di comunicarci eventuali intolleranze
@@ -27,6 +33,17 @@ const Wrapper = styled.section`
 
   .text-container {
     padding: 3.5rem 2rem 2rem 2rem;
+  }
+
+  .title-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .envelope {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
   }
   button {
     color: var(--medium-brown);
@@ -48,11 +65,12 @@ const Wrapper = styled.section`
     display: flex;
     flex-direction: row;
     margin: 90px auto;
-    border: 1.3px solid var(--medium-brown);
+    border: 2px solid var(--medium-brown);
     border-radius: 5px;
 
     .image-style {
       width: 50%;
+      height: 100%;
       border-radius: 5px 0 0 5px;
     }
 
