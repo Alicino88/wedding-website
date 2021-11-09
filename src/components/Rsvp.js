@@ -56,13 +56,13 @@ const Wrapper = styled.section`
     background-color: transparent;
     border-radius: 5px;
     margin-top: 1rem;
-    padding: 0.8rem 2rem;
+    padding: 0.5rem 1.8rem;
     font-size: 1rem;
   }
 
   button:hover {
-    border: 2px solid var(--dark-brown);
-    color: var(--dark-brown);
+    background-color: var(--medium-brown);
+    color: white;
   }
 
   @media (min-width: 750px) {
