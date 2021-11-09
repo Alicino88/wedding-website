@@ -20,7 +20,7 @@ const ConfermaPartecipazione = () => {
         <h3>Inserisci i tuoi dati</h3>
       </div>
 
-      <form data-netlify="true" name="conferme" method="POST">
+      <form data-netlify="true" name="conferme" method="POST" onSubmit="submit">
         <input type="hidden" name="form-name" value="conferme" />
         <Guest />
         <div className="add-guest">
