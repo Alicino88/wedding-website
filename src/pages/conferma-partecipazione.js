@@ -175,7 +175,7 @@ const Wrapper = styled.div`
   .title-style {
     color: var(--dark-grey);
     font-size: 2.3rem;
-    font-weight: 500;
+    font-weight: bold;
     line-height: 2.5rem;
   }
 
