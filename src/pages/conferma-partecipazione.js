@@ -53,7 +53,33 @@ const ConfermaPartecipazione = () => {
             </div>
           )}
         </div>
-        <button type="submit">send</button>
+        <div className="email-message-style">
+          <label for="email">
+            <p>Email di riferimento</p>
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            className="input-style"
+          ></input>
+        </div>
+
+        <div className="email-message-style">
+          <label for="message">
+            <p>Messaggio</p>
+          </label>
+          <textarea
+            type="text"
+            id="message"
+            name="messaggio"
+            className="textarea-style"
+            rows="8"
+            placeholder="Aggiungi qui eventuali allergie alimentari"
+          ></textarea>
+        </div>
+
+        <button type="submit">Invia</button>
       </form>
     </Wrapper>
   )
@@ -97,6 +123,45 @@ const Wrapper = styled.div`
     width: 30px;
     height: 30px;
     margin-right: 10px;
+  }
+
+  .email-message-style {
+    margin-top: 30px;
+  }
+
+  .textarea-style {
+    width: 100%;
+    max-width: 100%;
+    border: 2.5px solid var(--light-grey);
+    border-radius: 5px;
+    font-family: Roboto Slab;
+    font-size: 1rem;
+    color: var(--dark-grey);
+    padding: 10px;
+    outline: 0;
+  }
+
+  .textarea-style:focus {
+    border: 2.5px solid var(--dark-pink);
+  }
+
+  textarea::placeholder {
+    color: hsla(0, 0%, 77%, 1);
+  }
+
+  button {
+    color: var(--dark-pink);
+    border: 2px solid var(--dark-pink);
+    background-color: transparent;
+    border-radius: 5px;
+    margin-top: 2rem;
+    padding: 0.5rem 1.8rem;
+    font-size: 1rem;
+  }
+
+  button:hover {
+    background-color: var(--dark-pink);
+    color: white;
   }
 `
 export default ConfermaPartecipazione
