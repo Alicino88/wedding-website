@@ -39,20 +39,6 @@ const ConfermaPartecipazione = () => {
           <input name="bot-field"></input>
         </div>
         <Guest />
-        <div className="add-guest">
-          <StaticImage
-            src="../assets/images/plus.png"
-            className="plus-icon"
-            placeholder="blurred"
-            onClick={() => setParticipant(!participant)}
-          />
-          <p>Aggiungi ospite</p>
-          {participant && (
-            <div>
-              <Guest />
-            </div>
-          )}
-        </div>
         <div className="email-message-style">
           <label for="email">
             <p>Email di riferimento</p>
@@ -61,6 +47,33 @@ const ConfermaPartecipazione = () => {
             type="email"
             id="email"
             name="email"
+            className="input-style"
+          ></input>
+        </div>
+        <div className="email-message-style">
+          <label for="attendance">
+            <p>Potrai artecipare?</p>
+          </label>
+          <select
+            id="attendance"
+            name="partecipa"
+            className="input-style"
+            required
+          >
+            <option value="si" selected>
+              si
+            </option>
+            <option value="no">Non potro' esserci</option>
+          </select>
+        </div>
+        <div className="email-message-style">
+          <label for="guests">
+            <p>Ci saranno altri ospiti con te?</p>
+          </label>
+          <input
+            type="text"
+            id="guests"
+            name="altri-partecipanti"
             className="input-style"
           ></input>
         </div>
