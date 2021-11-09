@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 const Rsvp = () => {
   return (
@@ -8,12 +9,14 @@ const Rsvp = () => {
       <StaticImage
         src="../assets/images/rsvp.jpeg"
         className="image-style"
+        placeholder="blurred"
       ></StaticImage>
       <div className="text-container">
         <div className="title-container">
           <StaticImage
             src="../assets/images/envelope.png"
             className="envelope"
+            placeholder="blurred"
           />
           <h3>Ci sarai?</h3>
         </div>
@@ -22,7 +25,9 @@ const Rsvp = () => {
           sottostante. Ti chiediamo anche di comunicarci eventuali intolleranze
           o regimi alimentari particolari. Grazie!
         </p>
-        <button>rsvp</button>
+        <Link to="/conferma-partecipazione">
+          <button>rsvp</button>
+        </Link>
       </div>
     </Wrapper>
   )
@@ -65,7 +70,7 @@ const Wrapper = styled.section`
     display: flex;
     flex-direction: row;
     margin: 90px auto;
-    border: 2px solid var(--medium-brown);
+    border: 3px solid var(--medium-brown);
     border-radius: 5px;
 
     .image-style {
