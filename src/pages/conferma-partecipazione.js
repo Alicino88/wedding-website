@@ -19,7 +19,13 @@ const ConfermaPartecipazione = () => {
         className="background-style"
       />
       <div className="title-container">
-        <h3>Inserisci i tuoi dati</h3>
+        <h1 className="title-style">
+          Non vediamo l'ora di festeggiare insieme a te!
+        </h1>
+        <h2 className="subtitle-style">
+          Per favore conferma o declina la tua partecipazione entro il 31 Maggio
+          2022
+        </h2>
       </div>
 
       <form
@@ -38,10 +44,33 @@ const ConfermaPartecipazione = () => {
         <div hidden>
           <input name="bot-field"></input>
         </div>
-        <Guest />
+        <div className="name-and-surname">
+          <div className="data-container">
+            <label for="name">
+              <p className="small-uppercase">Nome</p>
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="nome"
+              className="input-style"
+            ></input>
+          </div>
+          <div className="data-container">
+            <label for="surname">
+              <p className="small-uppercase">Cognome</p>
+            </label>
+            <input
+              type="text"
+              id="surname"
+              name="cognome"
+              className="input-style"
+            ></input>
+          </div>
+        </div>
         <div className="email-message-style">
           <label for="email">
-            <p>Email di riferimento</p>
+            <p className="small-uppercase">Email di riferimento</p>
           </label>
           <input
             type="email"
@@ -52,7 +81,7 @@ const ConfermaPartecipazione = () => {
         </div>
         <div className="email-message-style">
           <label for="attendance">
-            <p>Potrai artecipare?</p>
+            <p className="small-uppercase">Potrai artecipare?</p>
           </label>
           <select
             id="attendance"
@@ -61,14 +90,16 @@ const ConfermaPartecipazione = () => {
             required
           >
             <option value="si" selected>
-              si
+              Sì
             </option>
-            <option value="no">Non potro' esserci</option>
+            <option value="no">Non potrò esserci</option>
           </select>
         </div>
         <div className="email-message-style">
           <label for="guests">
-            <p>Ci saranno altri ospiti con te?</p>
+            <p className="small-uppercase">
+              Porterai altri ospiti con te? Se sì per favore indicane i nomi:
+            </p>
           </label>
           <input
             type="text"
@@ -80,7 +111,7 @@ const ConfermaPartecipazione = () => {
 
         <div className="email-message-style">
           <label for="message">
-            <p>Messaggio</p>
+            <p className="small-uppercase">Messaggio</p>
           </label>
           <textarea
             type="text"
@@ -115,7 +146,21 @@ const Wrapper = styled.div`
   }
 
   .title-container {
-    text-align: center;
+    margin: auto;
+    width: 600px;
+  }
+
+  .title-style {
+    color: var(--dark-grey);
+    font-size: 2.3rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+  }
+
+  .subtitle-style {
+    font-weight: 400;
+    margin-top: 30px;
+    font-size: 1.3rem;
   }
 
   form {
@@ -126,16 +171,20 @@ const Wrapper = styled.div`
     margin: 30px auto;
     padding: 50px 50px;
   }
-
-  .add-guest {
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
+  .small-uppercase {
+    color: var(--dark-grey);
+    font-size: 0.8rem;
   }
-  .plus-icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+
+  .name-and-surname {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .data-container {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
   }
 
   .email-message-style {
