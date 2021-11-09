@@ -1,3 +1,5 @@
+//tutorial reference: how to use netlify forms in react https://www.youtube.com/watch?v=jRN78rEkswk&t=619s. Includes how to add email notification and extra protection from spam.
+
 import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
@@ -20,8 +22,22 @@ const ConfermaPartecipazione = () => {
         <h3>Inserisci i tuoi dati</h3>
       </div>
 
-      <form data-netlify="true" name="conferme" method="POST" onSubmit="submit">
+      <form
+        data-netlify="true"
+        name="conferme"
+        method="POST"
+        onSubmit="submit"
+        data-netlify-honeypot="bot-field"
+      >
+        {/*hidden imput necessary when website is built with React  */}
         <input type="hidden" name="form-name" value="conferme" />
+
+        {/*added extra protection from spam, together with data-netlify-honeypot="bot-field" above
+        if the bot fills this field then the submission is left out. “Honeypot” fields are hidden form fields that lure bot users into completing a field
+        that human users can’t see. https://docs.netlify.com/forms/spam-filters/*/}
+        <div hidden>
+          <input name="bot-field"></input>
+        </div>
         <Guest />
         <div className="add-guest">
           <StaticImage
