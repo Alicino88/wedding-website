@@ -43,22 +43,5 @@ const Wrapper = styled.div`
     flex-direction: column;
     width: 40%;
   }
-
-  .input-style {
-    border: 3px solid var(--light-grey);
-    border-radius: 5px;
-    width: 100%;
-    height: 2.2rem;
-    font-family: Roboto Slab;
-    font-size: 1rem;
-    color: var(--dark-grey);
-    padding: 10px;
-    outline: 0;
-    text-decoration: "none";
-  }
-
-  .input-style:focus {
-    border: 3px solid var(--dark-pink);
-  }
 `
 export default Guest
