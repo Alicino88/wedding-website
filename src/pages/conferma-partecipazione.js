@@ -3,25 +3,38 @@
 import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
-import Guest from "../components/Guest"
 import "../assets/css/main.css"
-import { useState } from "react"
+import { createRef, useEffect } from "react"
+import lottie from "lottie-web"
+import happy from "../assets/data/happy.json"
 
 const ConfermaPartecipazione = () => {
-  const [participant, setParticipant] = useState(false)
-  console.log(participant)
+  let animationContainer = createRef()
+  useEffect(() => {
+    const anim = lottie.loadAnimation({
+      container: animationContainer.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: happy,
+    })
+    return () => anim.destroy() // optional clean up for unmounting
+  }, [])
   return (
     <Wrapper>
       <StaticImage
         src="../assets/images/spots.png"
         placeholder="tracedSVG"
-        layout="constrained"
+        layout="fullWidth"
         className="background-style"
       />
       <div className="title-container">
-        <h1 className="title-style">
-          Non vediamo l'ora di festeggiare insieme a te!
-        </h1>
+        <div className="animation-and-title">
+          <div ref={animationContainer} className="animation-style" />
+          <h1 className="title-style">
+            Non vediamo l'ora di festeggiare insieme a te!
+          </h1>
+        </div>
         <h2 className="subtitle-style">
           Per favore conferma o declina la tua partecipazione entro il 31 Maggio
           2022
@@ -81,7 +94,7 @@ const ConfermaPartecipazione = () => {
         </div>
         <div className="email-message-style">
           <label for="attendance">
-            <p className="small-uppercase">Potrai artecipare?</p>
+            <p className="small-uppercase">Potrai partecipare?</p>
           </label>
           <select
             id="attendance"
@@ -98,7 +111,8 @@ const ConfermaPartecipazione = () => {
         <div className="email-message-style">
           <label for="guests">
             <p className="small-uppercase">
-              Porterai altri ospiti con te? Se sì per favore indicane i nomi:
+              Porterai altri ospiti con te? Se sì per favore indicane nome e
+              cognome:
             </p>
           </label>
           <input
@@ -144,6 +158,14 @@ const Wrapper = styled.div`
     z-index: -1;
     opacity: 0.3;
   }
+  .animation-and-title {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .animation-style {
+    width: 350px;
+  }
 
   .title-container {
     margin: auto;
@@ -174,6 +196,7 @@ const Wrapper = styled.div`
   .small-uppercase {
     color: var(--dark-grey);
     font-size: 0.8rem;
+    line-height: 1.5rem;
   }
 
   .name-and-surname {
@@ -184,7 +207,7 @@ const Wrapper = styled.div`
   .data-container {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 45%;
   }
 
   .email-message-style {
@@ -224,6 +247,37 @@ const Wrapper = styled.div`
   button:hover {
     background-color: var(--dark-pink);
     color: white;
+  }
+
+  @media (max-width: 680px) {
+    .title-container {
+      width: 320px;
+    }
+    .animation-and-title {
+      display: block;
+    }
+
+    .animation-style {
+      width: 200px;
+    }
+
+    .title-style {
+      font-size: 1.8rem;
+    }
+
+    form {
+      width: 320px;
+      padding: 50px 20px;
+    }
+
+    .name-and-surname {
+      display: block;
+    }
+
+    .data-container {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 `
 export default ConfermaPartecipazione
