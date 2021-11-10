@@ -11,6 +11,17 @@ import happy from "../assets/data/happy.json"
 const ConfermaPartecipazione = () => {
   let animationContainer = createRef()
   useEffect(() => {
+    //below added form validation: when the user clicks on the "send" button, all the required fields are selected and an extra class is added
+    //to all of them (.mystyle) that shows the invalid fields in red.
+    document
+      .getElementById("submitButton")
+      .addEventListener("click", function () {
+        let required = document.querySelectorAll(".required")
+        //console.log(required)
+        required.forEach(element => {
+          element.classList.add("mystyle")
+        })
+      })
     const anim = lottie.loadAnimation({
       container: animationContainer.current,
       renderer: "svg",
@@ -19,7 +30,7 @@ const ConfermaPartecipazione = () => {
       animationData: happy,
     })
     return () => anim.destroy() // optional clean up for unmounting
-  }, [])
+  })
   return (
     <Wrapper>
       <StaticImage
@@ -47,6 +58,7 @@ const ConfermaPartecipazione = () => {
         method="POST"
         onSubmit="submit"
         data-netlify-honeypot="bot-field"
+        id="form"
       >
         {/*hidden imput necessary when website is built with React  */}
         <input type="hidden" name="form-name" value="conferme" />
@@ -66,7 +78,8 @@ const ConfermaPartecipazione = () => {
               type="text"
               id="name"
               name="nome"
-              className="input-style"
+              className="input-style required"
+              required
             ></input>
           </div>
           <div className="data-container">
@@ -77,7 +90,8 @@ const ConfermaPartecipazione = () => {
               type="text"
               id="surname"
               name="cognome"
-              className="input-style"
+              className="input-style required"
+              required
             ></input>
           </div>
         </div>
@@ -89,7 +103,8 @@ const ConfermaPartecipazione = () => {
             type="email"
             id="email"
             name="email"
-            className="input-style"
+            className="input-style required"
+            required
           ></input>
         </div>
         <div className="email-message-style">
@@ -99,7 +114,7 @@ const ConfermaPartecipazione = () => {
           <select
             id="attendance"
             name="partecipa"
-            className="input-style"
+            className="input-style required"
             required
           >
             <option value="si" selected>
@@ -137,7 +152,9 @@ const ConfermaPartecipazione = () => {
           ></textarea>
         </div>
 
-        <button type="submit">Invia</button>
+        <button type="submit" id="submitButton">
+          Invia
+        </button>
       </form>
     </Wrapper>
   )
@@ -199,6 +216,10 @@ const Wrapper = styled.div`
     line-height: 1.5rem;
   }
 
+  //class that is applied, only after the user clicks on the "send button", to the invalid fields
+  .mystyle:invalid {
+    border: 1px solid red;
+  }
   .name-and-surname {
     display: flex;
     justify-content: space-between;
