@@ -19,12 +19,12 @@ const Navbar = ({ toggle }) => {
           </Link>
         </button>
         <button className="menu-btn">
+          <Link className="link-container">lista nozze</Link>
+        </button>
+        <button className="menu-btn">
           <Link className="link-container" to="/#rsvp">
             rsvp
           </Link>
-        </button>
-        <button className="menu-btn">
-          <Link className="link-container">lista nozze</Link>
         </button>
       </div>
       <button className="mobile-btn" onClick={toggle}>
