@@ -7,9 +7,10 @@ const Rsvp = () => {
   return (
     <Wrapper className="rsvp-container" id="rsvp">
       <StaticImage
-        src="../assets/images/rsvp.jpeg"
+        src="../assets/images/rsvp1.jpg"
         className="image-style"
         placeholder="blurred"
+        layout="constrained"
       ></StaticImage>
       <div className="text-container">
         <div className="title-container">
