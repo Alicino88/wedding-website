@@ -4,6 +4,7 @@ import { createRef, useEffect } from "react"
 import lottie from "lottie-web"
 import applause from "../assets/data/applause.json"
 import { Link } from "gatsby"
+import "../assets/css/main.css"
 
 const Grazie = () => {
   let animationContainer = createRef()
