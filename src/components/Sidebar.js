@@ -20,8 +20,12 @@ const Sidebar = ({ toggle, isOpen }) => {
             Matrimonio
             <BiPlus className="plus-icon" />
           </Link>
-          <Link className="sidebar-links" onClick={toggle}>
+          <Link className="sidebar-links" onClick={toggle} to="/lista-nozze">
             Lista nozze
+            <BiPlus className="plus-icon" />
+          </Link>
+          <Link className="sidebar-links" onClick={toggle} to="/#rsvp">
+            Rsvp
             <BiPlus className="plus-icon" />
           </Link>
         </div>
