@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { createRef, useEffect } from "react"
 import lottie from "lottie-web"
 import applause from "../assets/data/applause.json"
+import { Link } from "gatsby"
 
 const Grazie = () => {
   let animationContainer = createRef()
@@ -28,6 +29,9 @@ const Grazie = () => {
         <h2 className="subtitle-style">
           Marta &amp; Alberto - 25 giugno 2022, Castelletto sopra Ticino
         </h2>
+        <Link to="/" className="link-style">
+          <h3 className="small-uppercase back-to-hp">Torna alla home page</h3>
+        </Link>
       </div>
     </Wrapper>
   )
@@ -56,6 +60,16 @@ const Wrapper = styled.div`
   .title-style {
     color: var(--dark-grey);
     margin-bottom: 30px;
+  }
+
+  .back-to-hp {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 1rem;
+  }
+
+  .link-style {
+    color: var(--dark-pink);
   }
 `
 export default Grazie
