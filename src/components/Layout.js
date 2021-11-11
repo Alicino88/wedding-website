@@ -1,6 +1,7 @@
 import React from "react"
 import "../assets/css/main.css"
 import Navbar from "./Navbar"
+import Footer from "../components/Footer"
 import Sidebar from "./Sidebar"
 
 const Layout = ({ children }) => {
@@ -13,6 +14,7 @@ const Layout = ({ children }) => {
       <Navbar toggle={toggle} />
       <Sidebar toggle={toggle} isOpen={isOpen} />
       {children}
+      <Footer />
     </div>
   )
 }

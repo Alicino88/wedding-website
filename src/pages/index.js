@@ -6,7 +6,6 @@ import About from "../components/About"
 import Wedding from "../components/Wedding"
 import Location from "../components/Location"
 import Countdown from "../components/Countdown"
-import Footer from "../components/Footer"
 import Rsvp from "../components/Rsvp"
 
 export default function Home() {
@@ -19,7 +18,6 @@ export default function Home() {
       <Location />
       <Countdown />
       <Rsvp />
-      <Footer />
     </Layout>
   )
 }
