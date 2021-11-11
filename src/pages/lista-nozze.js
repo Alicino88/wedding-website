@@ -87,12 +87,13 @@ const Wrapper = styled.section`
     }
 
     .animation-style {
-      width: 150px;
+      width: 180px;
       margin: 50px 0;
     }
 
     .closing-paraghraph {
       text-align: left;
+      margin: 20px 0 30px 0;
     }
   }
 `
