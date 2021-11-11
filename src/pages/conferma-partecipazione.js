@@ -56,6 +56,7 @@ const ConfermaPartecipazione = () => {
         data-netlify="true"
         name="conferme"
         method="POST"
+        action="/grazie"
         onSubmit="submit"
         data-netlify-honeypot="bot-field"
         id="form"
@@ -194,12 +195,6 @@ const Wrapper = styled.div`
     font-size: 2.3rem;
     font-weight: bold;
     line-height: 2.5rem;
-  }
-
-  .subtitle-style {
-    font-weight: 400;
-    margin-top: 30px;
-    font-size: 1.3rem;
   }
 
   form {
