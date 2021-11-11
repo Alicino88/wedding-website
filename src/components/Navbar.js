@@ -19,7 +19,9 @@ const Navbar = ({ toggle }) => {
           </Link>
         </button>
         <button className="menu-btn">
-          <Link className="link-container">lista nozze</Link>
+          <Link className="link-container" to="/lista-nozze">
+            lista nozze
+          </Link>
         </button>
         <button className="menu-btn">
           <Link className="link-container" to="/#rsvp">
@@ -70,7 +72,7 @@ const Wrapper = styled.nav`
       display: none;
     }
     .nav-container {
-      width: 60%;
+      width: 80%;
       max-width: 1270px;
       margin: 0 auto;
       display: flex;
