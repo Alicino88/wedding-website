@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import { MdKeyboardArrowDown } from "react-icons/md"
+import { Link } from "gatsby"
 
 const Hero = () => {
   return (
@@ -20,9 +21,11 @@ const Hero = () => {
           &nbsp;Alberto
         </h1>
       </div>
-      <div className="arrow-container">
-        <MdKeyboardArrowDown className="arrow-down" />
-      </div>
+      <Link to to="/#noi">
+        <div className="arrow-container">
+          <MdKeyboardArrowDown className="arrow-down" />
+        </div>
+      </Link>
     </Wrapper>
   )
 }
