@@ -21,7 +21,7 @@ const HeroSmaller = () => {
 
 const Wrapper = styled.header`
   width: 100vw;
-  height: 70vh;
+  height: 80vh;
   max-height: 900px;
   position: absolute;
   top: 0;
@@ -30,9 +30,6 @@ const Wrapper = styled.header`
   .header-pic {
     width: 100%;
     height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     filter: brightness(0.6);
   }
 
