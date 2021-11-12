@@ -63,12 +63,6 @@ const Wrapper = styled.div`
     margin-bottom: 30px;
   }
 
-  .back-to-hp {
-    text-align: center;
-    margin-top: 100px;
-    font-size: 1rem;
-  }
-
   .link-style {
     color: var(--dark-pink);
   }
