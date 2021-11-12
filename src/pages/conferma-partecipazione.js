@@ -38,7 +38,7 @@ const ConfermaPartecipazione = () => {
         placeholder="tracedSVG"
         layout="fullWidth"
         className="background-style"
-        alt="dotted background"
+        alt=""
       />
       <div className="title-container">
         <div className="animation-and-title">

@@ -34,16 +34,18 @@ const About = () => {
         const pathToImage = getImage(sposo.foto)
         const pathToIcon = getImage(sposo.icon)
         return (
-          <article className="article-style">
+          <article className="article-style" key={sposo.titolo}>
             <GatsbyImage
               image={pathToImage}
               className="image-style"
+              alt={sposo.titolo}
             ></GatsbyImage>
             <div className="text-container">
               <div className="title-container">
                 <GatsbyImage
                   image={pathToIcon}
                   className="icon-style"
+                  alt=""
                 ></GatsbyImage>
                 <h3 className="title-style">{sposo.titolo}</h3>
               </div>

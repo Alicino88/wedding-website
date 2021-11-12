@@ -11,6 +11,7 @@ const Rsvp = () => {
         className="image-style"
         placeholder="blurred"
         layout="constrained"
+        alt="marta e alberto"
       ></StaticImage>
       <div className="text-container">
         <div className="title-container">
@@ -18,6 +19,7 @@ const Rsvp = () => {
             src="../assets/images/envelope.png"
             className="envelope"
             placeholder="blurred"
+            alt=""
           />
           <h3>Ci sarai?</h3>
         </div>

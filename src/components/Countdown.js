@@ -22,7 +22,7 @@ const Countdown = () => {
     //2)time left to the wedding is calculated by subtracting the event date minus the current date. It return number of milliseconds
     //between the two dates
     const difference = +new Date("June 25, 2022 17:00:00") - +new Date()
-    console.log(difference)
+    //console.log(difference)
 
     //below we convert the milliseconds into days, hours, minutes, and seconds
     let timeLeft = {}
@@ -33,7 +33,7 @@ const Countdown = () => {
         minuti: Math.floor((difference / 1000 / 60) % 60),
         secondi: Math.floor((difference / 1000) % 60),
       }
-      console.log(timeLeft)
+      //console.log(timeLeft)
     }
     return timeLeft
   }
@@ -69,7 +69,7 @@ const Countdown = () => {
 
     // If the timer interval has a value above zero, it adds an element to the timerComponents array.
     timerComponents.push(
-      <div className="date-block">
+      <div className="date-block" key={interval}>
         <h3 className="number-style">{timeLeft[interval]}</h3>
         <div className="small-uppercase"> {interval} </div>
       </div>
@@ -87,6 +87,7 @@ const Countdown = () => {
         placeholder="tracedSVG"
         layout="constrained"
         className="background-style"
+        alt=""
       />
       {/*The timerComponents.length line of code checks to see if there is anything inside the timerComponents array 
 and renders it if there is, otherwise it renders Time's up!*/}

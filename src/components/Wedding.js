@@ -137,6 +137,7 @@ const Wedding = () => {
           placeholder="tracedSVG"
           layout="constrained"
           className="background-style"
+          alt=""
         />
         <div
           className="program-card"

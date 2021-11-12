@@ -67,6 +67,7 @@ const Location = () => {
               placeholder="tracedSVG"
               layout="constrained"
               className="icon-style"
+              alt=""
             />
             <p className="link-style">Vedi sulla mappa</p>
           </a>
