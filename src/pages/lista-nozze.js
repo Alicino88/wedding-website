@@ -43,7 +43,7 @@ const Listanozze = () => {
 }
 
 const Wrapper = styled.section`
-  margin-top: 70vh;
+  margin-top: 80vh;
 
   .icon-and-text {
     display: flex;
@@ -75,6 +75,7 @@ const Wrapper = styled.section`
   }
 
   @media (max-width: 750px) {
+    margin-top: 70vh;
     .icon-and-text {
       display: flex;
       flex-direction: column-reverse;
