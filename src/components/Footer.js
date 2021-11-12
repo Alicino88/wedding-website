@@ -10,7 +10,7 @@ const Footer = () => {
           <a href="https://www.gatsbyjs.com/" target="_blank" rel="noopener">
             Gatsby.js
           </a>
-          &nbsp;| All rights reserved&nbsp;
+          &nbsp;| Icons by Icons8 and Lordicon &nbsp;
         </p>
       </div>
     </Wrapper>
@@ -32,6 +32,10 @@ const Wrapper = styled.footer`
     color: var(--dark-grey);
     text-align: center;
     padding: 30px 20px 30px 20px;
+  }
+
+  p {
+    line-height: 1.5rem;
   }
 
   span {
