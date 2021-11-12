@@ -38,6 +38,7 @@ const ConfermaPartecipazione = () => {
         placeholder="tracedSVG"
         layout="fullWidth"
         className="background-style"
+        alt="dotted background"
       />
       <div className="title-container">
         <div className="animation-and-title">
@@ -51,7 +52,7 @@ const ConfermaPartecipazione = () => {
           2022:
         </h2>
       </div>
-
+      {/*added data-netlify="true" to connect the for to netlify forms. "Action" defines to what page the user is redirected after submission */}
       <form
         data-netlify="true"
         name="conferme"
@@ -72,7 +73,9 @@ const ConfermaPartecipazione = () => {
         </div>
         <div className="name-and-surname">
           <div className="data-container">
-            <label for="name">
+            {/*In React for attribute becomes htmlFor */}
+
+            <label htmlFor="name">
               <p className="small-uppercase">Nome</p>
 
               <input
@@ -85,7 +88,7 @@ const ConfermaPartecipazione = () => {
             </label>
           </div>
           <div className="data-container">
-            <label for="surname">
+            <label htmlFor="surname">
               <p className="small-uppercase">Cognome</p>
               <input
                 type="text"
@@ -98,7 +101,7 @@ const ConfermaPartecipazione = () => {
           </div>
         </div>
         <div className="email-message-style">
-          <label for="email">
+          <label htmlFor="email">
             <p className="small-uppercase">Email di riferimento</p>
             <input
               type="email"
@@ -110,23 +113,24 @@ const ConfermaPartecipazione = () => {
           </label>
         </div>
         <div className="email-message-style">
-          <label for="attendance">
+          <label htmlFor="attendance">
             <p className="small-uppercase">Potrai partecipare?</p>
             <select
               id="attendance"
               name="partecipa"
               className="input-style required"
               required
+              defaultValue="si"
             >
-              <option value="si" selected>
-                Sì
-              </option>
+              {/*React doesn't use attribute "selected" on the option. Instead it uses value/defaultValue on the select element itself 
+              https://reactjs.org/docs/forms.html#the-select-tag */}
+              <option value="si">Sì</option>
               <option value="no">Non potrò esserci</option>
             </select>
           </label>
         </div>
         <div className="email-message-style">
-          <label for="guests">
+          <label htmlFor="guests">
             <p className="small-uppercase">
               Porterai altri ospiti con te? Se sì per favore indicane nome e
               cognome:
@@ -141,7 +145,7 @@ const ConfermaPartecipazione = () => {
         </div>
 
         <div className="email-message-style">
-          <label for="message">
+          <label htmlFor="message">
             <p className="small-uppercase">Messaggio</p>
             <textarea
               type="text"
