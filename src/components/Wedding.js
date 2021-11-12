@@ -142,6 +142,8 @@ const Wedding = () => {
           className="program-card"
           onMouseEnter={startHeartAnimation}
           onMouseLeave={stopHeartAnimation}
+          role="button"
+          tabIndex="0"
         >
           <div className="animation-container" ref={animationContainer1}></div>
           <p className="small-uppercase">ore 17:00</p>
@@ -151,6 +153,8 @@ const Wedding = () => {
           className="program-card"
           onMouseEnter={startCocktailAnimation}
           onMouseLeave={stopCocktailAnimation}
+          role="button"
+          tabIndex="0"
         >
           <div className="animation-container" ref={animationContainer4}></div>
           <p className="small-uppercase">ore 18:00</p>
@@ -160,6 +164,8 @@ const Wedding = () => {
           className="program-card"
           onMouseEnter={startWineAnimation}
           onMouseLeave={stopWineAnimation}
+          role="button"
+          tabIndex="0"
         >
           <div className="animation-container" ref={animationContainer2}></div>
           <p className="small-uppercase">ore 19:30</p>
@@ -169,6 +175,8 @@ const Wedding = () => {
           className="program-card"
           onMouseEnter={startPartyAnimation}
           onMouseLeave={stopPartyAnimation}
+          role="button"
+          tabIndex="0"
         >
           <div className="animation-container" ref={animationContainer3}></div>
           <p className="small-uppercase">ore 22:00</p>
