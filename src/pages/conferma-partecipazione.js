@@ -74,55 +74,56 @@ const ConfermaPartecipazione = () => {
           <div className="data-container">
             <label for="name">
               <p className="small-uppercase">Nome</p>
+
+              <input
+                type="text"
+                id="name"
+                name="nome"
+                className="input-style required"
+                required
+              ></input>
             </label>
-            <input
-              type="text"
-              id="name"
-              name="nome"
-              className="input-style required"
-              required
-            ></input>
           </div>
           <div className="data-container">
             <label for="surname">
               <p className="small-uppercase">Cognome</p>
+              <input
+                type="text"
+                id="surname"
+                name="cognome"
+                className="input-style required"
+                required
+              ></input>
             </label>
-            <input
-              type="text"
-              id="surname"
-              name="cognome"
-              className="input-style required"
-              required
-            ></input>
           </div>
         </div>
         <div className="email-message-style">
           <label for="email">
             <p className="small-uppercase">Email di riferimento</p>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              className="input-style required"
+              required
+            ></input>
           </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            className="input-style required"
-            required
-          ></input>
         </div>
         <div className="email-message-style">
           <label for="attendance">
             <p className="small-uppercase">Potrai partecipare?</p>
+            <select
+              id="attendance"
+              name="partecipa"
+              className="input-style required"
+              required
+            >
+              <option value="si" selected>
+                Sì
+              </option>
+              <option value="no">Non potrò esserci</option>
+            </select>
           </label>
-          <select
-            id="attendance"
-            name="partecipa"
-            className="input-style required"
-            required
-          >
-            <option value="si" selected>
-              Sì
-            </option>
-            <option value="no">Non potrò esserci</option>
-          </select>
         </div>
         <div className="email-message-style">
           <label for="guests">
@@ -130,27 +131,27 @@ const ConfermaPartecipazione = () => {
               Porterai altri ospiti con te? Se sì per favore indicane nome e
               cognome:
             </p>
+            <input
+              type="text"
+              id="guests"
+              name="altri-partecipanti"
+              className="input-style"
+            ></input>
           </label>
-          <input
-            type="text"
-            id="guests"
-            name="altri-partecipanti"
-            className="input-style"
-          ></input>
         </div>
 
         <div className="email-message-style">
           <label for="message">
             <p className="small-uppercase">Messaggio</p>
+            <textarea
+              type="text"
+              id="message"
+              name="messaggio"
+              className="textarea-style"
+              rows="8"
+              placeholder="Aggiungi qui eventuali allergie alimentari"
+            ></textarea>
           </label>
-          <textarea
-            type="text"
-            id="message"
-            name="messaggio"
-            className="textarea-style"
-            rows="8"
-            placeholder="Aggiungi qui eventuali allergie alimentari"
-          ></textarea>
         </div>
 
         <button type="submit" id="submitButton">
