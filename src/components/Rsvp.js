@@ -76,7 +76,6 @@ const Wrapper = styled.section`
 
     .image-style {
       width: 50%;
-      height: 100%;
       border-radius: 5px 0 0 5px;
     }
 
