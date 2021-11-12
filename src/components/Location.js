@@ -21,7 +21,7 @@ export const query = graphql`
 const Location = () => {
   const data = useStaticQuery(query)
   const location = data.contentfulLocation
-  console.log(location)
+  // console.log(location)
   const pathToImage = getImage(location.picture)
   return (
     <Wrapper>
