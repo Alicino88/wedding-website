@@ -47,8 +47,8 @@ const ConfermaPartecipazione = () => {
           </h1>
         </div>
         <h2 className="subtitle-style">
-          Per favore conferma o declina la tua partecipazione entro il 31 Maggio
-          2022
+          Per favore conferma o declina la tua partecipazione entro il 15 Maggio
+          2022:
         </h2>
       </div>
 
