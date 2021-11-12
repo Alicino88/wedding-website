@@ -7,7 +7,11 @@ const Footer = () => {
       <div className="footer-container">
         <p className="footer-content">
           Copyright&nbsp; <span> Alice Moretti </span> - 2021 | Built with&nbsp;
-          <a href="https://www.gatsbyjs.com/" target="_blank" rel="noopener">
+          <a
+            href="https://www.gatsbyjs.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Gatsby.js
           </a>
           &nbsp;| Icons by Icons8 and Lordicon &nbsp;

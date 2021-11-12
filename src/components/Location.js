@@ -38,6 +38,7 @@ const Location = () => {
             <a
               href="https://www.marcoarduino.com/"
               target="_blank"
+              rel="noreferrer"
               style={{
                 color: "hsl(46, 28%, 33%)",
               }}
@@ -59,6 +60,7 @@ const Location = () => {
             }}
             href="https://www.google.com/maps/place/Jardin+a+Vivre/@45.7044514,8.6436016,17z/data=!3m1!4b1!4m5!3m4!1s0x4786651a342b23e1:0x4610fe8a8edaa426!8m2!3d45.7044062!4d8.6457315"
             target="_blank"
+            rel="noreferrer"
           >
             <StaticImage
               src="../assets/images/map_icon.png"

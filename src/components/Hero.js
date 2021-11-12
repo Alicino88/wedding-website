@@ -21,7 +21,7 @@ const Hero = () => {
           &nbsp;Alberto
         </h1>
       </div>
-      <Link to to="/#noi">
+      <Link to="/#noi">
         <div className="arrow-container">
           <MdKeyboardArrowDown className="arrow-down" />
         </div>
