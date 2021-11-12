@@ -1,10 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import SEO from "../components/SEO"
 
 const Error = () => {
   return (
     <Wrapper>
+      <SEO title="Errore" description="pagina di errore" />
       <h1>Ops, la pagina che cerchi non esiste</h1>
       <Link to="/" className="link-style">
         <h3 className="small-uppercase back-to-hp">Torna alla home page</h3>

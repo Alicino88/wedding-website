@@ -5,6 +5,7 @@ import styled from "styled-components"
 import { createRef, useEffect } from "react"
 import lottie from "lottie-web"
 import plane from "../assets/data/plane.json"
+import SEO from "../components/SEO"
 
 const Listanozze = () => {
   let animationContainer = createRef()
@@ -21,6 +22,10 @@ const Listanozze = () => {
   })
   return (
     <Layout>
+      <SEO
+        title="Sposi in viaggio"
+        description="Aiutaci a farci sognare! Vorremmo trascorrere la nostra luna di miele su di una splendida spiaggia alle Isole Seychelles"
+      />
       <HeroSmaller />
       <Wrapper>
         <h1 className="closing-paraghraph">

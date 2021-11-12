@@ -7,6 +7,7 @@ import "../assets/css/main.css"
 import { createRef, useEffect } from "react"
 import lottie from "lottie-web"
 import happy from "../assets/data/happy.json"
+import SEO from "../components/SEO"
 
 const ConfermaPartecipazione = () => {
   let animationContainer = createRef()
@@ -33,6 +34,10 @@ const ConfermaPartecipazione = () => {
   })
   return (
     <Wrapper>
+      <SEO
+        title="Partecipazione"
+        description="Compila il modulo e conferma o declina la tua partecipazione al matrimonio"
+      />
       <StaticImage
         src="../assets/images/spots.png"
         placeholder="tracedSVG"

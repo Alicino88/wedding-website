@@ -5,6 +5,7 @@ import lottie from "lottie-web"
 import applause from "../assets/data/applause.json"
 import { Link } from "gatsby"
 import "../assets/css/main.css"
+import SEO from "../components/SEO"
 
 const Grazie = () => {
   let animationContainer = createRef()
@@ -22,6 +23,10 @@ const Grazie = () => {
 
   return (
     <Wrapper>
+      <SEO
+        title="Grazie per il riscontro"
+        description="Grazie per aver compilato il modulo e averci informati circa la tua partecipazione al nostro matrimonio"
+      />
       <div className="text-container">
         <div className="title-and-icon">
           <div ref={animationContainer} className="animation-style"></div>
