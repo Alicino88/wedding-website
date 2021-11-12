@@ -58,7 +58,6 @@ const ConfermaPartecipazione = () => {
         name="conferme"
         method="POST"
         action="/grazie"
-        onSubmit="submit"
         data-netlify-honeypot="bot-field"
         id="form"
       >
