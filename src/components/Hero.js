@@ -38,9 +38,6 @@ const Wrapper = styled.header`
   .header-pic {
     width: 100%;
     height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     filter: brightness(0.6);
   }
 
