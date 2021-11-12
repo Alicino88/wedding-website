@@ -14,7 +14,6 @@ const Navbar = ({ toggle }) => {
         </button>
         <button className="menu-btn">
           <Link className="link-container" to="/#il-matrimonio">
-            {" "}
             il matrimonio
           </Link>
         </button>
