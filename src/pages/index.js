@@ -19,8 +19,10 @@ export default function Home() {
       <Hero />
       <Title />
       <About />
-      <Wedding />
-      <Location />
+      <main>
+        <Wedding />
+        <Location />
+      </main>
       <Countdown />
       <Rsvp />
     </Layout>
