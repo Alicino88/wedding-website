@@ -7,26 +7,38 @@ const Navbar = ({ toggle }) => {
   return (
     <Wrapper>
       <div className="nav-container">
-        <button className="menu-btn">
-          <Link className="link-container" to="/#noi">
+        <Link className="link-container" to="/#noi" aria-label="Gli sposi">
+          <button className="menu-btn" tabIndex="-1">
             noi
-          </Link>
-        </button>
-        <button className="menu-btn">
-          <Link className="link-container" to="/#il-matrimonio">
+          </button>
+        </Link>
+        <Link
+          className="link-container"
+          to="/#il-matrimonio"
+          aria-label="Il matrimonio"
+        >
+          <button className="menu-btn" tabIndex="-1">
             il matrimonio
-          </Link>
-        </button>
-        <button className="menu-btn">
-          <Link className="link-container" to="/lista-nozze">
+          </button>
+        </Link>
+        <Link
+          className="link-container"
+          to="/lista-nozze"
+          aria-label="Lista nozze"
+        >
+          <button className="menu-btn" tabIndex="-1">
             lista nozze
-          </Link>
-        </button>
-        <button className="menu-btn">
-          <Link className="link-container" to="/#rsvp">
+          </button>
+        </Link>
+        <Link
+          className="link-container"
+          to="/#rsvp"
+          aria-label="Conferma partecipazione"
+        >
+          <button className="menu-btn" tabIndex="-1">
             rsvp
-          </Link>
-        </button>
+          </button>
+        </Link>
       </div>
       <button className="mobile-btn" onClick={toggle}>
         <HiMenuAlt2 />
