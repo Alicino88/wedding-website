@@ -93,25 +93,29 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 730px) {
+  }
+
+  @media (min-width: 1000px) {
     .article-style {
       display: grid;
       grid-template-columns: 0.8fr 1fr;
       grid-template-areas: "image text";
-      width: 650px;
+      width: 900px;
+      max-width: 1270px;
       margin: 60px auto 150px;
     }
 
     //by giving the image and the text area distinct names (grid-area: image; grid-area: text), it is possible to invert their order
     //with the property grid-template-areas
-
     .article-style:nth-child(2) {
       grid-template-areas: "text image";
       grid-template-columns: 1fr 0.8fr;
     }
 
-    //makes the dropdown shadow of the second element of a different color
-    .article-style:nth-child(2) .image-style {
-      box-shadow: 30px -30px 0px var(--medium-brown);
+    .text-container {
+      padding: 1.5rem 0rem 1.5rem 2rem;
+      grid-area: text;
+      background-color: transparent;
     }
 
     .article-style:nth-child(2) .text-container {
@@ -127,11 +131,11 @@ const Wrapper = styled.section`
       grid-area: image;
     }
 
-    .text-container {
-      padding: 1.5rem 0rem 1.5rem 2rem;
-      grid-area: text;
-      background-color: transparent;
+    //makes the dropdown shadow of the second element of a different color
+    .article-style:nth-child(2) .image-style {
+      box-shadow: 30px -30px 0px var(--medium-brown);
     }
+
     .icon-style {
       width: 40px;
     }
@@ -141,24 +145,11 @@ const Wrapper = styled.section`
     p {
       text-align: start;
     }
-  }
 
-  @media (min-width: 1100px) {
-    .article-style {
-      grid-template-columns: 0.6fr 1fr;
-      grid-template-areas: "image text";
-      width: 1000px;
-    }
-    .article-style:nth-child(2) {
-      grid-template-columns: 1fr 0.6fr;
-    }
-
-    .text-container {
-      padding: 1.5rem 0rem 1.5rem 3rem;
-    }
-
-    .article-style:nth-child(2) .text-container {
-      padding: 1.5rem 3rem 1.5rem 0rem;
+    @media (min-width: 1200px) {
+      .article-style {
+        width: 1100px;
+      }
     }
   }
 `
