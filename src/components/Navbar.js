@@ -6,6 +6,9 @@ import { HiMenuAlt2 } from "react-icons/hi"
 const Navbar = ({ toggle }) => {
   return (
     <Wrapper>
+      <button className="mobile-btn" onClick={toggle}>
+        <HiMenuAlt2 />
+      </button>
       <div className="nav-container">
         <Link className="link-container" to="/#noi" aria-label="Gli sposi">
           <button className="menu-btn" tabIndex="-1">
@@ -40,9 +43,6 @@ const Navbar = ({ toggle }) => {
           </button>
         </Link>
       </div>
-      <button className="mobile-btn" onClick={toggle}>
-        <HiMenuAlt2 />
-      </button>
     </Wrapper>
   )
 }
@@ -50,7 +50,7 @@ const Navbar = ({ toggle }) => {
 const Wrapper = styled.nav`
   display: flex;
   align-items: center;
-  justify-content: end;
+
   background-color: transparent;
   height: 5rem;
   z-index: 1;
@@ -61,7 +61,7 @@ const Wrapper = styled.nav`
   }
 
   .mobile-btn {
-    margin-right: 20px;
+    margin-left: 20px;
     margin-top: 20px;
     background-color: transparent;
     border: none;
