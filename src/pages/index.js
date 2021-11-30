@@ -8,7 +8,7 @@ import Location from "../components/Location"
 import Countdown from "../components/Countdown"
 import Rsvp from "../components/Rsvp"
 import SEO from "../components/SEO"
-import hpImage from "../assets/images/hp_pic.PNG"
+import hpImage from "../assets/images/hp-pic.jpg"
 
 export default function Home() {
   return (
