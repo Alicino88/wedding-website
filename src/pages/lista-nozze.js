@@ -80,7 +80,7 @@ const Wrapper = styled.section`
   }
 
   @media (max-width: 750px) {
-    margin-top: 70vh;
+    margin-top: 75vh;
     .icon-and-text {
       display: flex;
       flex-direction: column-reverse;
