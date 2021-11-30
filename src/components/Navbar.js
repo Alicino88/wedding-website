@@ -68,7 +68,7 @@ const Wrapper = styled.nav`
   }
 
   .mobile-btn svg {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .link-container {
