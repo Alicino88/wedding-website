@@ -8,6 +8,7 @@ import Location from "../components/Location"
 import Countdown from "../components/Countdown"
 import Rsvp from "../components/Rsvp"
 import SEO from "../components/SEO"
+import hpImage from "../assets/images/hp_pic.PNG"
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <SEO
         title="Marta e Alberto sposi"
         description="Marta e Alberto si sposeranno il 25 giugno 2022, presso la splendida location Jardin à Vivre a Castelletto sopra Ticino"
+        image={hpImage}
       />
       <Hero />
       <Title />
