@@ -130,7 +130,6 @@ const Wrapper = styled.section`
     }
 
     .pic-style {
-      height: 100%;
       max-width: 100%;
       border-radius: 5px;
       box-shadow: -30px -30px var(--medium-brown);
