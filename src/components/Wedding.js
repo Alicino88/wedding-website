@@ -147,7 +147,7 @@ const Wedding = () => {
           tabIndex="0"
         >
           <div className="animation-container" ref={animationContainer1}></div>
-          <p className="small-uppercase">ore 16:30</p>
+          <p className="small-uppercase">ore 17:00</p>
           <p className="text-style">cerimonia simbolica</p>
         </div>
         <div
