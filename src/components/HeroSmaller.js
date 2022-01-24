@@ -6,7 +6,7 @@ const HeroSmaller = () => {
   return (
     <Wrapper>
       <StaticImage
-        src="../assets/images/beach.jpg"
+        src="../assets/images/maldives2.jpg"
         className="header-pic"
         alt="seychelles beach"
         placeholder="blurred"

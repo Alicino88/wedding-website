@@ -36,7 +36,7 @@ const Listanozze = () => {
           <div>
             <p>
               Gli sposini vorrebbero raggiungere la paradisiaca destinazione
-              delle Seychelles, passando per il Louvre di Abu Dabi . Se volete
+              delle Maldive, passando per il Louvre di Abu Dabi. Se volete
               contribuire al nostro sogno, di seguito il nostro IBAN:
             </p>
             <p className="small-uppercase">IT83M0329601601000067380316</p>
