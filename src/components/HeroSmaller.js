@@ -30,7 +30,7 @@ const Wrapper = styled.header`
   .header-pic {
     width: 100%;
     height: 100%;
-    filter: brightness(0.6);
+    filter: brightness(0.4);
   }
 
   .hero-content {
