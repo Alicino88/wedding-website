@@ -148,7 +148,7 @@ const Wedding = () => {
         >
           <div className="animation-container" ref={animationContainer1}></div>
           <p className="small-uppercase">ore 17:00</p>
-          <p className="text-style">cerimonia simbolica</p>
+          <p className="text-style">cerimonia</p>
         </div>
         <div
           className="program-card"
